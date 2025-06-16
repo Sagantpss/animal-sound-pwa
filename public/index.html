@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Sound Drop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>Drag Animal → Listen → Place in Habitat</h1>
+  <h2>Score: <span id="score">0</span></h2>
+  <button id="reset-btn">🔄 Reset Game</button>
+  <h2 id="win-message" style="display: none; color: green;">🎉 You Win! 🎉</h2>
+
+  <div class="animals">
+    <div class="animal" draggable="true" data-sound="cat.mp3" data-home="house" id="cat">
+      🐱<span>Cat</span>
+    </div>
+    <div class="animal" draggable="true" data-sound="dog.mp3" data-home="house" id="dog">
+      🐶<span>Dog</span>
+    </div>
+    <div class="animal" draggable="true" data-sound="cow.mp3" data-home="farm" id="cow">
+      🐮<span>Cow</span>
+    </div>
+    <div class="animal" draggable="true" data-sound="lion.mp3" data-home="jungle" id="lion">
+      🦁<span>Lion</span>
+    </div>
+  </div>
+
+  <div class="dropzone" id="listen-zone">🎧 Drop Here to Listen</div>
+
+  <div class="habitats">
+    <h4>🌾 Farm</h4><div class="habitat" id="farm"></div>
+    <h4>🏠 House</h4><div class="habitat" id="house"></div>
+    <h4>🌴 Jungle</h4><div class="habitat" id="jungle"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

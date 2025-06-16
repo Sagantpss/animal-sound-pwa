@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 2rem;
+}
+
+.animals {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.animal {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  font-size: 2rem;
+  margin: 15px;
+}
+
+div#house {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.animal span {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.dropzone, .habitat {
+  border: 2px dashed #444;
+  background-color: #fffde7;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 300px;
+  min-height: 80px;
+  line-height: 60px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.habitats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#reset-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: #d32f2f;
+}
